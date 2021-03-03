@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Strinds &  String Methode</title>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.yes yes </h1>
+    <h3 id="content">
+        <!-- This will be field by javascript later. -->
+    </h3>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda excepturi non repudiandae ut vel similique beatae quaerat? Vel sit corrupti eligendi maxime possimus provident tempore officia quam excepturi commodi, dolorum quia, ad ullam aliquid?</p>
+    </div>
+    <script>
+        //Strings : 
+
+        //To use ('') in the sentence we use ("") on the outside and vice versa.
+        var string = "This is a string. ";
+        var name = "Roshan";
+        var other_string = "Roshan string. ";
+        var interest = "web development. "
+        var message = "I am here to learn JavaSrcropt. ";
+
+        //To use both ('') and ("") we use (``) which is is the top-left of the keyboard.
+
+        var temp = `${name} is a person who have interest in "${interest}"`;
+        console.log(string + other_string + message);
+        console.log(temp);
+
+        var len = name.length;      //This line asign the length of name variable to the len variabel.
+        console.log(`The length of my name is ${len}`);
+
+        //Escapre sequence character ex : \n, \t, \b.
+
+        console.log("Hello World\nRoshan\tBishi");
+        console.log("To use back slash we have to write double slash in code like this \n \\Show one slash in web page.");
+
+        //To insert element into html : 
+        document.getElementById('content').innerHTML = 'This is a heading inserted by javascript.'
+
+
+    </script>
+</body>
+</html>

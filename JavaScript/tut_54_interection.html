@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interection using alert confirm and prompt</title>
+</head>
+<body>
+    <div class="container">
+        this is a division.
+    </div>
+    <script>
+        //alert in in-browser script
+        // alert finction return nothing.
+        // alert("This is a message.")
+
+
+        // Lets ask user to enter his/her name :
+        // let name = prompt("What is your name?", "Guest");
+        //The above line ask the user to enter his name assign his enteered value to the 'name variable.'
+        //The second arguement is th edefalut value
+        // console.log(name);
+
+        // lets take confirmation from the user
+        let delete_post = confirm('Do you really want to delete the post?');
+        // if the user confirms the above message then the line will return 'true' other wise it return 'false'.
+        console.log(delete_post);
+
+        if(delete_post==true){
+            //This line will appeare if user confirm the message.
+            console.log("Your post is deleted successfully.");
+        }
+        else{
+             //This line will appeare if user does not confirm the message.
+            console.log("Your post is not been deleted.");
+        }
+    </script>
+</body>
+</html>

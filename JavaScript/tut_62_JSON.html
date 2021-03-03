@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON tutorial</title>
+</head>
+<body>
+    <div class="segment">This is my Segment</div>
+
+    <script>
+        let jsonObj = {
+            name: 'Roshan',
+            subject: 'Conputer Sxience',
+            food: 'Chili Chicken'
+        }
+        console.log(jsonObj);
+
+        // Lets convert Object to json-string using srtingify function.
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);
+
+        // Replacing food attribute of myJsonStr
+        myJsonStr = myJsonStr.replace('Chili Chicken','Chicken Manchurian')
+        console.log(myJsonStr);
+
+        // lets agains convert that valid json-string to again json
+        let convert_json = JSON.parse(myJsonStr);
+        console.log(convert_json);
+    </script>
+</body>
+</html>

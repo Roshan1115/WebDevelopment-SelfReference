@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Property</title>
+    <style>
+        /* Positions are many types such as static (default), absolute, relative sticky, fixed. */
+        .container{
+            border: 2px solid black;
+            background-color: rgb(233, 233, 200);
+            height: 3500px;
+        }
+        .box{
+            display: inline-block;
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+            /* position: relative;  Relative to its normal position. */
+            /* position: absolute;   Relative to the parents position.  */
+            /* position: fixed;    always fixed to the given (position and relative to is browser window) when scroll by the user also. */
+
+        #box3{
+            position: fixed;
+            right: 100px;
+            top: 30px;
+        }
+        #box1{
+            position: sticky;
+            top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <div class="box" id="box1"><h3>Box 1</h3></div>
+    <div class="box" id="box2"><h3>Box 2</h3></div>
+    <div class="box" id="box3"><h3>Box 3</h3></div>
+    <div class="box" id="box4"><h3>Box 4</h3></div>
+
+    </div>
+</body>
+</html>

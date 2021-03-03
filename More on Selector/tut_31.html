@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selector</title>
+    <style>
+        h1{
+            background-color: red;
+            color: white;
+        }
+
+        div p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+        }
+        div li p{
+            color: brown;
+            background-color: grey;
+
+        }
+        /* This CSS only applied to the direct child of all div tags. 
+        div > p{  
+            background-color: yellow;
+            color: black;
+        } */
+
+        /* This CSS will be applied to the paragraph whose previous siblings is a div or we can say if the p is right after the div. */
+        /* div + p{
+            color: white;
+            background-color: black;
+             
+        } */
+    </style>
+</head>
+<body>
+    <h1>This is more about Selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li><p>This is a li paragraph,</p></li>
+                <li>This is will not take the CSS of the paragraph inside li tag.</li>
+                <li><p>This is another Paragraph inside the ul tag.</p></li>
+            </ul>
+            <p>This is a paragraph.</p> 
+        </div>
+        <p>This is another paragraph.</p>
+    </div>
+    <p>this is outermost paragraph.</p>
+</body>
+</html>

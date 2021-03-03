@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates</title>
+    <style>
+        .container {
+            background-color: rgb(231, 221, 176);
+            padding: 40px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #Time {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span>
+            <h1 class="inline">clock : </h1>
+        </span>
+        <span id="Time" class="inline"></span>
+    </div>
+
+    <script>
+        console.log('This is date and time tutorial');
+        let now = new Date();       //This is an object
+        console.log(now);
+
+        // let newDate = new Date('year, month, day, hour, minute, seconds, miliseconds')
+        newDate = new Date(2030, 3, 24, 3, 5, 34, 23);
+        console.log(newDate);
+
+        let yr = newDate.getFullYear();
+        console.log('this is year ; ', yr);
+        let month = newDate.getMonth();
+        console.log('This is month : ', month);
+        let day = newDate.getDay();
+        console.log('This is day : ', day);
+        let hour = newDate.getHours();
+        console.log('This is hour : ', hour);
+        let dat = newDate.getDate();
+        console.log(dat);
+
+        // lets change the date of neewDate
+        newDate.setDate(5);
+        newDate.setSeconds(7);
+        console.log(newDate);
+
+
+        //This will print the tital miliseconds that have passed after teh standard date.
+        console.log(Date.now());
+
+        // Add a clock 
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            Time.innerHTML = new Date();
+        }
+    </script>
+</body>
+
+</html>

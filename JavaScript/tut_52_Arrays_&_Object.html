@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Objects</title>
+</head>
+<body>
+    <div class="container">Simple Html.</div>
+    <script>
+        let myVar = 34;
+        let myVar1 = 'String';      //String data type
+        let myVar2 = true;      //Boolean data type
+        let myVar3 = 45.55;     //Float data type
+
+        let student = {     //This is an object.
+            name: 'Roshan',
+            Roll_No: 23423232,
+            semester: 'B.Tech CSE first year',
+            address: 'Near manabandh pada',
+            'next Area': 'Coca cola distributor'
+        }
+        console.log(student);
+
+         let name = [14,254,4,5,'Roshan',true];        //This is an array.
+         console.log(name);
+         console.log(name[4]);      // 4 is the index.
+
+         //Another way to define array
+
+         let name2 = new Array(34,true,'My Name is Roshan',false)       //parenthesis braces is used while defining using new.
+         console.log(name2);
+
+        //  to print length of the array 
+        console.log(name.length);
+
+        //Sorting of an array 
+        name = name.sort();
+        console.log('sorted array : ' + name);
+
+        //inserting element in the end of an array 
+        name.push('This sting is pushed');
+        console.log(name);
+
+        //create 25 empty element in an array
+        let Array_1 = new Array(25);
+
+    </script>
+</body>
+</html>

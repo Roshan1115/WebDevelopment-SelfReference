@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Size</title>
+    <style>
+        html{
+            font-size: 25px;
+            /* this line is base font size of root element and will be used by the 'rem' unit later. */
+        }
+        .container{
+            font-size: 10px;
+            border: 2px solid red;
+            width: 100vw;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            font-size: 5em;
+            /* em is the unit related to the parent element. 3 em means the child element will be 3 times of the parent elements.  */
+
+            /* if we define padding as 3 em then it will be 3 times of the font-size of the same '#first' element.  */
+            padding: 2em;
+        }
+        #second{
+            font-size: 3rem;
+            padding: 3rem;
+            /* rem unit related to the base font size defined in the html section in style. */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first a heading.</h1>
+        <h1 id="second">This is second a heading.</h1>
+        <h1 id="third">This is third a heading.</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Querry</title>
+    <style>
+        .box{
+            font-size: 72px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            display: none;
+        }
+        @media (max-width: 450px)        /* The block element inside it take action only if the arguement of @media satisfy the condition in the website. */
+        {
+            #box-1{
+                display: block;
+            }
+        }
+        @media (max-width: 1300px) and (min-width: 450px)
+        {
+            #box-2{
+                display: block;
+                background-color: blue;
+            }
+        }
+        @media (max-width: 1800px) and (min-width: 1300px)
+        {
+            #box-3{
+                display: block;
+                background-color: yellow;
+                color: black; 
+            }
+        }
+        @media only screen and (min-width: 1800px)
+        {
+            #box-4{
+                display: block;
+                background-color: grey;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">I am an Iphone</div>
+    <div class="box" id="box-2">I am a Tablet</div>
+    <div class="box" id="box-3">I am a computer</div>
+    <div class="box" id="box-4">I am a wide-screen Computer</div>
+</body>
+</html>

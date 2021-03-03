@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid & Responsive</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* Fr is used to make it responsive. */
+            
+            /* The elements can be aligned as flex Box. */
+            /* justify-content: center; */
+
+            /* Making Responsive  */
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* This ninja technique make the minimum width of the element 300px amd align the element accordingly. */
+           
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 500px)); */
+            /* This ninja technique make the minimum width of the element 300px amd maximum width 500px and align the element accordingly. */
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(186, 223, 235);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+        <div class="box">Item-7</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-9</div>
+        <div class="box">Item-10</div>
+        <div class="box">Item-11</div>
+        <div class="box">Item-12</div>
+    </div>
+</body>
+</html>

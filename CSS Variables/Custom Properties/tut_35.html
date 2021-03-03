@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variavles/ Custom Properties</title>
+    <style>
+        :root{
+            /* This line declare the global variable which scope is accessible throughout the body.  */
+            --global-color: pink;
+            --Another_global-color: yellow;
+
+            /* Another variable for macimum width   */
+            --maxWidth: 450px;
+        }
+        .box{
+            /* This lline create a variable which can be used by other element later.  */
+            --box-color: blue;
+            /* The scope of the variable is local and valid till the block of this particular selector. */
+            width: 200px;
+            height: 200px;
+            background-color: var(--box-color);
+            border: 2px solid red;
+            margin: 9px;
+            box-shadow: 10px 10px var(--box-color);
+
+        }
+        #box-2{
+            background-color: var(--Another_global-color);
+        }
+        .container{
+            display: flex;
+            /* flex-wrap: wrap; */
+            background-color: var(--global-color);
+            max-width: var(--maxWidth);
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box" id="box-2"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

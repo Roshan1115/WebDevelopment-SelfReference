@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allignment</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+
+        }
+        body{
+            font-family: 'Ubuntu Mono', monospace;
+        }
+        .container{
+            width: 900px;
+            border: 3px solid purple;
+            margin: auto;       /*This line bring the whole container element to center in x axis. */
+            background-color: rgb(228, 226, 196);
+        
+        }
+        .item{
+            border: 3px solid grey;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background-color: rgb(203, 227, 230);
+        }
+        #fruits{
+            width: 48%;
+            float: left;
+        }
+        #computer{
+            width: 48%;
+            float: right;
+        }
+        #stationary{
+            clear: left;    /*This line means there is non 'float: left' elements are allowed in this section.*/ 
+            clear: right;
+
+            /* WE can use 'clear: both' to clear both right and left. */
+        }
+        p{
+            text-align: center;
+        }
+        h1{
+            margin: 30px 0px;
+            text-align: center;
+            font-family: 'Sansita Swashed', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wellcome to my Store</h1>
+        <div id="fruits" class="item">
+            <h3>Fruits</h3>
+            <p id="fruitsPara" class="Para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente repellat deserunt quod. Nemo placeat iusto harum recusandae, aliquid voluptatibus rem quos incidunt veritatis quibusdam laboriosam dolorem, qui, optio laudantium!</p>
+        </div>
+        <div id="computer" class="item">
+            <h3>Computer</h3>
+            <p id="computerPara" class="Para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente repellat deserunt quod. Nemo placeat iusto harum recusandae, aliquid voluptatibus rem quos incidunt veritatis quibusdam laboriosam dolorem, qui, optio laudantium!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat autem nostrum molestias debitis impedit esse, nobis omnis veritatis eveniet! Ad, dolores, cupiditate veniam ipsum beatae placeat accusamus saepe ullam deserunt, voluptas dolorem molestiae quis.</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationaryPara" class="Para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente repellat deserunt quod. Nemo placeat iusto harum recusandae, aliquid voluptatibus rem quos incidunt veritatis quibusdam laboriosam dolorem, qui, optio laudantium!</p>
+        </div>
+        <div id="glasses" class="item">
+            <h3>Stationary</h3>
+            <p id="glassesPara" class="Para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente repellat deserunt quod. Nemo placeat iusto harum recusandae, aliquid voluptatibus rem quos incidunt veritatis quibusdam laboriosam dolorem, qui, optio laudantium!</p>
+        </div>
+    </div>
+</body>
+</html>

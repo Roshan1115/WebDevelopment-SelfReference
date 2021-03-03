@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+    <style>
+        #btn{
+            padding: 10px 10px;
+            border-color: red;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Events means something happend. It is like pseudo selectors</h1>
+    <!-- Browwers events : 
+    1. click
+    2. context menue(mouse right click)
+    3. mouse-over/mouse-out
+    4. mouse-up/mouse-down
+
+    5. submit
+    6. focus
+
+    7. DOM content loaded -->
+
+    <div class="container">
+        <h1>This is my heading.</h1>
+       <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eveniet odio incidunt veniam sed aperiam hic error optio perspiciatis repudiandae reiciendis aliquid ducimus ea, porro eum nihil illum corporis accusamus natus adipisci. Error quisquam ullam cupiditate perferendis nam labore maiores ex eligendi amet porro cum officia consectetur laboriosam dolorem, reprehenderit ut iure eveniet quam vitae dolores necessitatibus at reiciendis excepturi? Doloremque ad aperiam non deserunt! Quasi excepturi quia quis eveniet harum suscipit error beatae recusandae est quam cum, minus et, voluptates quibusdam, praesentium consequatur in vel? Cupiditate ut nesciunt aspernatur tempore, laudantium minima, rem ipsum laboriosam, ex velit nobis itaque doloribus illo veritatis. Voluptatibus numquam excepturi consequuntur adipisci! Iusto perspiciatis aperiam eum quas! Doloremque praesentium quis odio alias, molestias cum autem, perspiciatis quod excepturi laborum hic corporis. Dignissimos nihil facere ut illo tempora animi?</p>
+        
+       
+       <!-- This line have hide() funciton which we will define later in script.  -->
+       <button id="btn" onclick="togglehide()">Show/Hide</button>
+       <!-- In above line there we have weitten in-line javascript.  -->
+
+    </div>
+
+
+
+
+
+
+    <script>
+        let box = document.getElementById("btn");
+        let para = document.getElementById("para");
+
+        //This funcion will activte when mouse is clicked on button.
+        function togglehide(){      //func defination of in-linely called function.
+            if(para.style.display != 'none'){
+                para.style.display = 'none';
+            }
+            else{
+                para.style.display = 'block';
+            }
+        }
+
+        // Lets create funciton for para and apply without calling in-linely inside html.
+        //This funciton will activate when mouse is hovering over para.
+        function run(){
+            alert('Mouse is hovering in illegal area.');
+        }
+        para.addEventListener('mouseover', run)
+        //This line wiil call the run functoin when mouse hover on para.
+
+        // lets create function to act when mouse go outside the button, in shortcut way.
+        box.addEventListener('mouseout', function run1(){
+            alert('Mouse is outside of button.')
+        })
+    </script>
+</body>
+</html>
+
+<!-- Note : 
+    if we have id like para then automatically there will be an object created named as para inside the script. In this code, there is alreade two object name para and btn is created and we can use them without declaring another variable. -->

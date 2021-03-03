@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is about loops.</h1>
+    </div>
+    <script>
+        console.log('This is tutorial fr loops.');
+        let i = 0;
+
+        // For loop
+        for(i=0; i<3; i++){     // Same as C++
+            console.log(i);
+        }
+
+        let friends = ['Roshan', 'Manish', 'bittu', 'akash', 'Nikhil']
+        
+        for (let index = 0; index < friends.length; index++) {
+            console.log('Hello Friend, ' + friends[index]);
+        }
+        console.log('\n');
+
+        //Another shortcut to print all the above ;
+        
+        friends.forEach(function f(my_element){
+            console.log('Hellow friend to forEach function, ' + my_element)}
+        )
+            console.log('\n');
+
+        // Other way to print above using 'for-of' loop
+            for(element_name of friends){
+                console.log('Hello friend ' + element_name + " Wellcome to for-of loop.");
+            }
+            console.log('\n');
+
+            // lets discuss about 'for-in' feature.
+            let employee = {
+                name: 'Ramu',
+                salary: 2,
+                channel: 'I Dont know'
+            }
+
+            for(iteration_name in employee){
+                console.log(`THe ${iteration_name} of the employee is : ${employee[iteration_name]}.`);
+            }
+            console.log('\n');
+
+
+            // While loop
+            let n = 0;
+            while(n<4){
+                console.log(`${n} is less than 4. It is while loop.`);
+                n++;
+            }
+            console.log('\n');
+
+
+            // Do-while loop
+            let a = 2;
+            do{
+                console.log(`${a} is less than 10. It is do-while loop.`);
+                a++;
+            }
+            while(a<5);
+            
+    </script>
+</body>
+</html>

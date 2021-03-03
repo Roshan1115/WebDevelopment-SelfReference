@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <div class="container">
+        This is arrow functions tutoorial
+    </div>
+
+    <script>
+        // function function_1(){
+        //     console.log('Hello Good morning.');
+        // }
+        // function_1();
+
+        //We can rewrite the avobe function in shortcut using Arrow
+        let function_1 = () => {
+            console.log('Hello Good morning.');
+        }
+        function_1();
+
+        // Lets write setTimeout usign arrow.
+        setTimeout(() => {
+            console.log('We are inside of setTimeout funcion which occure after 2.5 sec uses arrow');
+        }, 2500);
+        console.log('\n');
+
+        // Other functions using arrows
+        let sum = (a, b) => {
+            return a + b;
+        }
+        console.log('The result of sum is : ', sum(12, 5));
+
+        // We can write this function even shotter way.
+        let sum1 = (a, b) => a + b;
+        console.log('The result of the sum1 is : ', sum1(32, 4));
+
+        // We can use this shortcut even without parenthasis braces BUT THERE SHOUL DBE ONLY ONE ARGUEMENT TO THIS FUNCTION.
+        let add_7 = a => a + 7;
+        console.log('The result of add_7 is : ', add_7(5));
+
+        // Another example
+        let example_print = () => console.log('This is printed by example_print function with shortcut');
+        console.log(example_print);
+
+        // Object 'this' concept
+        let obj1 = {
+            greetings: 'Good Morning ',
+            Names: ['Roshan', 'Manish', 'Bittu', 'Akash', 'Nikhil'],
+            speak() {
+                this.Names.forEach(function index(i){
+                    console.log(obj1.greetings + 'Whatsupp ' + i);
+                });
+            }
+        }
+        obj1.speak();
+        console.log('\n');
+
+        //Other way using arrrow.
+        let obj2 = {
+            greetings: 'Good Morning From object 2 ',
+            Names: ['Roshan', 'Manish', 'Bittu', 'Akash', 'Nikhil'],
+            speak() {
+               this.Names.forEach((element)=>{
+                   console.log(this.greetings + "Whatsupp " + element);
+               });
+            }
+        }
+        obj2.speak();
+        // Note, the arrow function allow 'this' keyword to look its parent object no mater how deep the 'this' is present in a function.
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript string functions</title>
+</head>
+<body>
+    
+
+    <script>
+        var str = "This is a string."
+        console.log(str);
+
+        //infexOF function (First occurance of a sub-string)
+        var pos = str.indexOf('is');
+        var last_pos = str.lastIndexOf('is');
+        console.log(`The position of first occurance of 'is' : ${pos}.`);
+        console.log(`The position of second occurance of 'is' : ${last_pos}.`);
+
+        //sub-strinf from a string : 
+        var slice_str = str.slice(1,6);     //here the last value i.e, 6 is exclusive.
+        console.log(slice_str);             //Slice can accept negative value.
+        console.log('\n');
+
+        var substring_str = str.substring(1,6);     //It is same as slice.
+        console.log(substring_str);                 //It can't accept negative value.
+        console.log('\n');
+
+       var substr_str = str.substr(1,6);        //here the first value says from where
+        console.log(substr_str);                // to start
+                                                //Second value says the length of the 
+                                                //child string.
+
+        // Replacing strings : 
+        console.log('\n');
+        var replace_str = str.replace('string', 'Roshan');
+        console.log(str);
+        console.log(replace_str);
+
+        //Convert to upper/lower case : 
+        console.log('\n');
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        //concatenatig with help of funcitons : 
+        console.log('\n');
+        var new_str = str.concat(' This is a new string.')
+        console.log(new_str);
+        console.log('\n');
+        console.log(str + ' This is a new string.');
+
+        //Trim the last and first wide spaces : 
+        console.log('\n');
+        var trim_string = '     This  is        my    wide string.      ';
+        console.log(trim_string);
+        console.log('\n');
+        console.log(trim_string.trim());
+        // The trim function will trim the first and last wide space of the string.
+
+        //Character at desired index
+        console.log('\n');
+        var char1 = str.charAt(8);
+        console.log(char1);
+
+        //Character code at desired index
+        console.log('\n');
+        var char2 = str.charCodeAt(8);
+        console.log(char2);
+
+    </script>
+</body>
+</html>

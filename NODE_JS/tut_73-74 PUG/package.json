@@ -1,0 +1,19 @@
+{
+  "name": "roshan_first_express",
+  "version": "1.0.0",
+  "description": "This is going to be fun with express.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Awesome123"
+  ],
+  "author": "Roshan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "pug": "^3.0.0"
+  }
+}

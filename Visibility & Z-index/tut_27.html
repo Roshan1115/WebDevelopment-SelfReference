@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility & z-indesx</title>
+    <style>
+        .box{
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+        #box1{
+            background-color: red;
+            position: relative;
+            top: 70px;
+            z-index: 4;
+            }
+        #box2{background-color: green;
+        
+        /* visibility: hidden, onely hide the element but occupy the needed space of the elementl. Where as 'display: none' statement hide the element and the space for element also. */
+
+            /* Z index doesn't work with position static elements.  */
+
+           position: relative;
+           z-index: 2;
+
+        }
+        /* The element having greater z-index occurs first. */
+        #box3{
+            background-color: blue
+            
+        }
+        #box4{
+            background-color: yellow;;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

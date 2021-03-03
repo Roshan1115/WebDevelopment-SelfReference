@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box & Text Shadow</title>
+    <style>
+        .container{
+            display: flex;
+
+        }
+        .card{
+            padding: 25px 25px;
+            border: 2px solid red;
+            margin: 15px 15px;
+            background-color: rgba(238, 225, 197);
+
+            box-shadow: 10px 10px 10px 20px  rgb(150, 235, 150, 0.6);
+            /* In the box Shadow first value specify the right and second value specify the bottom. If the first value is positive, the shadow will go right if it is negative then the shadow will go to left.  */
+            /* Same goes to the second value for bottom and up side.  */ 
+            /* The third value specify the blurness to the border.  */
+            /* The fourth value specifies the spread radius.  */
+
+            /* box-shadow: offset-x pffset-y blur-raidus spread-radius */
+            
+            /* In the rgba section, the fourth value is alpha and specifies the darkness of the colour. */
+
+            /* box-shadow: inset 10px 10px 15px rgb(41, 3, 3); */
+            /* inset used to give the shadow inside the box */
+            
+        }
+        .card h2{
+            text-shadow: 5px 5px 5px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is Web Development course.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa facere eligendi distinctio a aliquam optio iusto velit eaque inventore iste! Sequi facilis excepturi harum quidem. Rerum suscipit consequatur non ipsam nihil sunt quibusdam eius.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is second course.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa facere eligendi distinctio a aliquam optio iusto velit eaque inventore iste! Sequi facilis excepturi harum quidem. Rerum suscipit consequatur non ipsam nihil sunt quibusdam eius.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>This is third course.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa facere eligendi distinctio a aliquam optio iusto velit eaque inventore iste! Sequi facilis excepturi harum quidem. Rerum suscipit consequatur non ipsam nihil sunt quibusdam eius.</p>
+        </div>
+    </div>
+</body>
+</html>

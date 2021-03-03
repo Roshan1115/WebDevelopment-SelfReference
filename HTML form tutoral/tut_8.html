@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is forms tutoral</title>
+</head>
+<body>
+    <h2>This is forms tutorial</h2>
+    
+    <!-- Below line create a form and submit the data to backend.php  -->
+    <!-- And in we are going to use <div> tag also. -->
+    <form action="backend.php">     
+        <div> 
+            <label for="name1">Name; </label>    
+             <input type="text" name="myName" id="name1">
+        </div>
+        <!-- 'label' tag is used to heighlight the area when pressed by cursonr by the user. (In safari when user select to enter input, the area is by default highlighted) -->
+        <!-- The 'id' attribute is needed when we use 'label' tag. -->
+        <div> Role: <input type="text" name="myRoll"> 
+        </div>
+        <div> Email: <input type="email" name="myEmail">
+        </div>
+        <div> Are you eligible ? <input type="checkbox" name="myEligibilty">
+        </div>
+        <div> 
+            Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender"> Other <input type="radio" name="myGender">
+        </div>
+        
+        <!-- The 'name' attribute used above is a reeference used by the backend file. -->
+        <!-- There are many type of input tag like email, text, date, number, checkbox, radio, etc. -->
+        <!-- Input (checkbox) having same 'name' attribute can be checked either one among provided options. -->
+        
+        <div>
+            Describe about yourslf: <textarea name="myText" cols=90 rows=10></textarea>
+        </div>
+
+        <!-- Lets use 'select'tag and also 'label' tag -->
+       <label for="car1">Which car you would prefer ? </label>
+        <select name="myCar" id="car1">
+            <option value="ci" selected>Maruti Ciaz</option>
+            <option value="sw">Maruti Swift</option>
+            <option value="inv">Tayota Innova</option>
+        </select>
+
+        <!-- 'selected' attribute is used to select the the item by default. -->
+
+
+        <div>
+            <input type="submit" value="Submit Now">
+        </div>
+        <div>
+            <input type="reset" value="Reset to Empty">
+        </div>
+        </form>
+
+</body>
+</html>ˀ

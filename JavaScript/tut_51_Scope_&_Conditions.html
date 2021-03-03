@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Scope & Condition</title>
+</head>
+<body>
+    <script>
+        var string = 'This is a string.';
+        console.log(string);
+        string = 'This is anoter string assigned to string variable';
+        console.log(string);
+
+        let a = 'Global Variable';
+    {
+        let b = "local Variable"
+        console.log(`The string "${b}" have the scope limited to this blok only.`);
+    }
+    const a1 = 'This cannot be changed';
+    console.log(a1);
+
+    // a1 = 'I want to change a1'      //This line will throw error
+
+    //Conditions 
+    let age = 4;
+    if(age>18){
+        console.log('You can drink.');
+    }
+    else if(age==2){
+        console.log('Age is equal to 2.')
+    }
+    else{
+        console.log('You can drink Water.');
+    }
+
+    //Switch case
+    const cups = 4;
+switch (cups) {
+    case 4:
+        console.log('There is 4 cup of tea.');
+         break;
+    case 39:
+        console.log('There is 39 cup of tea.');
+         break;
+    case 11:
+        console.log('There is 11 cup of tea.');
+         break;
+
+    default:
+        console.log('THe calue of cups is non of 4, 39 & 11.');
+        break;
+}
+    </script>
+</body>
+</html>

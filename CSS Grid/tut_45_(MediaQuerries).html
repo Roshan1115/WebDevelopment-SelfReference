@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid & Media Querries</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer'
+          
+
+        }
+
+        span {
+            padding: 10px
+        }
+
+        @media only screen and (max-width: 700px) {
+            body {
+                background-color: rgb(172, 169, 169);
+            }
+
+            .container {
+                grid-template-areas:
+                 'navbar navbar navbar navbar'
+                 'section section section section'
+                 'aside aside aside aside'
+                 'footer footer footer footer'
+            }
+            aside{
+                display: none;
+            }
+            span {
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width: 700px) and (max-width: 1800px) {
+            body {
+                background-color: rgb(223, 114, 110);
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media only screen and (min-width: 1800px) and (max-width: 2600px) {
+            body {
+                background-color: rgb(147, 224, 151);
+            }
+        }
+
+        @media only screen and (min-width: 2600px) {
+            body {
+                background-color: rgb(223, 228, 150);
+            }
+        }
+
+        .bdr {
+            background-color: wheat;
+            border: 2px solid black;
+            padding: 10px 20px;
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About us</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bdr">
+            <h2>I am here to learn CSS</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum dolorum voluptatem esse, ullam aperiam molestiae, aliquam sunt, corporis explicabo inventore quam consectetur voluptatum nobis aut dicta repudiandae tempore soluta veritatis accusamus. Natus eius non temporibus ipsam dolore, nostrum dignissimos incidunt atque error neque ut. Voluptates consectetur repellendus obcaecati eaque omnis adipisci similique, voluptatem praesentium aspernatur unde nam consequatur molestias iure dolor possimus. Eius, velit labore saepe earum quae voluptatum vero harum, non ex soluta sapiente dolores nulla tempore. Aperiam, eius provident? Rem nihil est distinctio porro alias voluptate commodi odit rerum eligendi sit sunt ipsam non ipsum nisi consequatur repudiandae quam deleniti, ex facilis saepe. Doloremque nobis necessitatibus, pariatur a quibusdam, quidem reiciendis molestiae inventore delectus reprehenderit alias cum tempora possimus aliquid. Repellat unde, consequatur quisquam dolore autem sunt tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consequuntur illo sapiente ad ducimus aut quas ratione repellat aliquid enim deleniti, ipsam esse nihil doloribus vitae, minima quis aspernatur blanditiis culpa cupiditate eligendi mollitia porro voluptas. Laboriosam libero repellendus vitae expedita natus. Beatae nobis quia aspernatur quam deserunt assumenda aliquid?</p>
+        </section>
+        <aside class="bdr">
+            <h2>More about us</h2>
+        </aside>
+    </div>
+    <footer class="bdr">
+        I am Roshan Bishi 2020.
+    </footer>
+</body>
+
+</html>

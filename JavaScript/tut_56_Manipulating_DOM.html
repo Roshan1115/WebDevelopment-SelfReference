@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <div class="container" id='main'>
+        <ul id='nav'>
+            <li>Home</li>
+            <li>Services</li>
+            <li>About us</li>
+            <li>Date of origine</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
+    <script>
+        // element by id
+        let division = document.getElementById("main");
+        console.log(division);
+        let nav = document.getElementById('nav');
+        console.log(nav);
+
+        //Manipulating 
+        // nav.innerHTML = 'dinamic element';
+        // above line will delete all elements and insert above string inside the given id.
+
+        // elemtns by class :
+        let cont = document.getElementsByClassName('container');
+        console.log(cont);
+
+        //returning by CSS selectors.
+        // This line will return the FIRST elemnt whose class is 'container'
+        let sel = document.querySelector('.container');
+        console.log('the first element whose class is container is ' , sel);
+
+        // ex: to return the first li elemnt of id nav
+        let first_li = document.querySelector('#nav>li');
+        console.log('This is first li element : ',first_li);
+
+        // To return all the elelments with CSS selector
+        let all_li = document.querySelectorAll('#nav>li');
+        console.log('All the li elements inside the nav are ; ',all_li);
+
+        // lets change the strig of the second li element.
+        all_li[1].innerHTML = 'String inserted in second position.';
+
+    </script>
+</body>
+</html>

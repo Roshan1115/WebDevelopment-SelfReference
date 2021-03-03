@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set TimeOut and CleaerTimeOut</title>
+</head>
+<body>
+    <div class="container">
+        <h1>The time now is :  <span id="time"></span></h1>
+    </div>
+
+    <script>
+        console.log('This is tutorial 58.');
+
+        // setTimeout --> allow us to run a function once after the interval of time.
+        // cleartimeout -->allows us to run a function repeatedly after interval of times.
+
+        function function_name(name){
+            console.log("Hellow good morning. I am saying it after 2 seconds "+ name);
+        }
+        function function2(name1){
+            console.log('This is second function ' + name1);
+        }
+        //settimeout is a function and it take first arguement as function and second as teh time in miliseconds.
+        let timeout = setTimeout(function_name,2000,"Roshan");
+        //We can give stings as further arguement to the STO function
+        console.log('The id of this setTimeout funcion is ' + timeout);
+        //Settimeout function always generate an id and we can assign that id to any variable to further use in cleartimeout function.
+        
+        // This line will cancel the occurance of given settimeout funciton.
+        clearTimeout(timeout);
+        console.log('\n');
+
+        // Lets discuss about the setInterval
+        IntervalID = setInterval(function2, 1500, 'Roshan');
+       
+        //This line will terminate the running of setinterval and the message will not appeare
+        clearInterval(IntervalID,)
+
+
+        //Let display time in our website
+
+        function displayTime(){
+            let time = new Date();
+            document.getElementById('time').innerHTML = time;
+        }
+         setInterval(displayTime, 1000);    //This will update every seconds.
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /* the * selector is universal selector wich targate to every element in the mark up. */
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            /* The Margin and padding above are defult value which can be over-right later. */
+        }
+        .container{
+            background-color: rgba(231, 230, 241);
+            border: 2px solid rgb(168, 139, 215);
+            /* Padding and margin can be written continuesly and it goes from top, right, bottom, left (anti clockwise) */
+            /* We can write top-bottom  right-let padding and margin if the value of opposite side is same. */
+            padding: 34px 19px;
+            margin: 14px 19px;
+            border-radius: 17px;
+            width: 533px;
+            box-sizing: border-box;
+
+            /* The width of the container is the sum of padding,border and margin. So if we try to change any one of that three the width also change. To avoid that we use 'border-box' property. */
+
+
+        }
+        body{
+            background-color: rgb(230, 200, 255); 
+        }
+    </style> 
+</head>
+<body>
+    <div class="container">
+    <h3>This is first heading.</h3>
+    <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita neque, incidunt ipsa molestiae eveniet velit facilis eum nemo quo, aspernatur quam aperiam quidem</p>
+</div>
+<div class="container">
+    <h3>This is second heading.</h3>
+    <p id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod nisi, corrupti a voluptates ab sequi quae cum. Inventore qui eum non repellendus officia?</p>
+</div>
+<div class="container">
+<h3>This is third heading.</h3>
+    <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quisquam consequuntur odio illum repellendus quidem nam iste, quae ea voluptate inventore autem exercitationem recusandae.</p>
+</div>
+
+</body>
+</html>
